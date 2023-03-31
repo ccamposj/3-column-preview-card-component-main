@@ -1,0 +1,82 @@
+.features__card {
+  padding: 3.5rem;
+
+  .features__icon {
+    margin-bottom: 2rem;
+  }
+
+  .features__primary-header {
+    font-family: $ff-headings;
+    font-size: $fs-700;
+    font-weight: $fw-bold;
+    text-transform: uppercase;
+    color: $clr-neutral-200;
+    margin-bottom: 2rem;
+  }
+
+  .features-text {
+    margin-bottom: 2rem;
+  }
+
+  .btn:link.btn__orange,
+  .btn:visited.btn__orange {
+    @include btn($clr-primary-orange);
+  }
+  .btn:link.btn__cyan,
+  .btn:visited.btn__cyan {
+    @include btn($clr-primary-cyan);
+  }
+  .btn:link.btn__dark-cyan,
+  .btn:visited.btn__dark-cyan {
+    @include btn($clr-primary-dark-cyan);
+  }
+
+  .btn:hover.btn__orange,
+  .btn:active.btn__orange {
+    @include btn--hov($clr-primary-orange);
+  }
+  .btn:hover.btn__cyan,
+  .btn:active.btn__cyan {
+    @include btn--hov($clr-primary-cyan);
+  }
+  .btn:hover.btn__dark-cyan,
+  .btn:active.btn__dark-cyan {
+    @include btn--hov($clr-primary-dark-cyan);
+  }
+}
+
+// Background color of each card
+.features__card.features__sedans {
+  background-color: $clr-primary-orange;
+}
+
+.features__card.features__suvs {
+  background-color: $clr-primary-cyan;
+}
+
+.features__card.features__luxury {
+  background-color: $clr-primary-dark-cyan;
+}
+
+.attribution {
+  text-align: center;
+  color: black;
+
+  a:link,
+  a:visited {
+    color: black;
+    text-decoration: none;
+  }
+}
+
+// Media queries
+@media (min-width: 40.625em) {
+  main {
+    margin: 1rem;
+  }
+  .features {
+    max-width: 60rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
